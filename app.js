@@ -19,7 +19,7 @@ app.set("view engine", "ejs");
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 mongoose.connect(`mongodb+srv://${USER_NAME}:${PASSWORD}@cluster0.qrml7jb.mongodb.net/todoListDB`);
 
